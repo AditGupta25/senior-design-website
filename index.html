@@ -82,26 +82,26 @@
             <div class="form-row">
               <div class="form-group col-md-6">
                 <label for="inputEmail4">Project Name</label>
-                <input type="email" class="form-control" id="inputEmail4" placeholder="Project Name">
+                <input class="form-control" id="projectName" placeholder="Project Name" required>
               </div>
             </div>
 
             <div class="form-group">
-                <label for="exampleFormControlTextarea1">One Line Project Description</label>
-                <textarea maxlength="1000" class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
+                <label for="projectDescription">One Line Project Description</label>
+                <textarea maxlength="1000" class="form-control" id="projectDescription" rows="2"></textarea>
             </div>
 
             <div class="form-row">
                 <div class="form-group col-md-6">
-                    <label for="exampleFormControlFile1" class="float-left">Team Logo</label>
-                    <img id="companyLogo" src="./img/portfolio/cake.png" class="rounded float-left" alt="..." style="width: 250px; height: 250px; margin-top: 5%; margin-bottom: 5%">
+                    <label for="exampleFormControlFile1" class="float-left">Team Logo (Required: 500px x 500px)</label>
+                    <img id="companyLogo" src="./img/portfolio/cake.png" class="rounded float-left" alt="..." style="width: 500px; height: 500px; margin-top: 2%; margin-bottom: 5%">
                     <input type="file" class="form-control-file" id="exampleFormControlFile1" onchange="readURL(this, 'companyLogo')">
                 </div>
             </div>
 
             <div class="form-group">
-                <label for="exampleFormControlTextarea1">Abstract (2-3 Paragraphs)</label>
-                <textarea maxlength="5000" class="form-control" id="exampleFormControlTextarea2" rows="10"></textarea>
+                <label for="abstract">Abstract (2-3 Paragraphs)</label>
+                <textarea maxlength="5000" class="form-control" id="abstract" rows="10"></textarea>
             </div>
             
 
@@ -109,12 +109,12 @@
             <div class="container">
                 <div class="row">
                     <div class="col">
-                        <label for="exampleFormControlFile1" class="float-left">Screenshot 1</label>
+                        <label for="exampleFormControlFile1" class="float-left">Screenshot 1 (Required: 500px x 500px)</label>
                         <img id="screenshot1" src="./img/portfolio/cabin.png" class="rounded float-left" alt="..." style="width: 500px; height: 500px; margin-top: 5%; margin-bottom: 5%">
                         <input type="file" class="form-control-file" id="exampleFormControlFile1" onchange="readURL(this, 'screenshot1')">
                     </div>
                     <div class="col">
-                        <label for="exampleFormControlFile1" class="float-left">Screenshot 2</label>
+                        <label for="exampleFormControlFile1" class="float-left">Screenshot 2 (Required: 500px x 500px)</label>
                         <img id="screenshot2" src="./img/portfolio/submarine.png" class="rounded float-left" alt="..." style="width: 500px; height: 500px; margin-top: 5%; margin-bottom: 5%">
                         <input type="file" class="form-control-file" id="exampleFormControlFile1" onchange="readURL(this, 'screenshot2')">
                     </div>
@@ -140,36 +140,67 @@
                     <div class="col-md-12" >
                           <div id="field">
                             <div id="field0">
-
                                 <!-- Text input-->
-                                <div class="form-group">
-                                  <label class="col-md-4 control-label" for="user_name">Name</label>  
+                                <!-- <div class="form-group">
+                                  <label class="col-md-4 control-label" for="user_name0">Name</label>  
                                   <div class="col-md-5">
-                                    <input id="user_name" name="user_name" type="text" placeholder="" class="form-control input-md">
+                                    <input id="user_name0" name="user_name0" type="text" placeholder="Jane Smith" class="form-control input-md">
                                   </div>
-                                </div>
+                                </div> -->
 
                                 <!-- Text input-->
-                                <div class="form-group">
-                                  <label class="col-md-4 control-label" for="user_email">Email</label>  
+                                <!-- <div class="form-group">
+                                  <label class="col-md-4 control-label" for="user_email0">Email</label>  
                                   <div class="col-md-5">
-                                  <input id="user_email" name="user_email" type="text" placeholder="" class="form-control input-md">
+                                  <input id="user_email0" name="user_email0" type="text" placeholder="Jane@Smith.com" class="form-control input-md">
                                     
                                   </div>
-                                </div>
+                                </div> -->
                               
                                 
                                 <!-- File Button --> 
-                                <div class="form-group">
-                                  <label class="col-md-4 control-label" for="user_picture">Member Photo</label>
+                                <!-- <div class="form-group">
+                                  <label class="col-md-4 control-label" for="user_picture0">Member Photo (Required: 500px x 500px)</label>
                                   <div class="col-md-4">
-                                              <input type="file" id="user_picture" name="user_picture" class="input-file" accept=".png,.jpg,.jpeg">
-                                    <div id="action_jsondisplay"></div>
+                                              <input type="file" id="user_picture0" name="user_picture0" class="input-file" accept=".png,.jpg,.jpeg">
+                                    <div id="action_jsondisplay">    
+                                    </div>
                                   </div>
-                                </div>
-        
-                            </div>
+                                </div> -->
+
+                                <div class="container">
+                                  <div class="row">
+                                      <div class="col" style="margin-top: 10%">
+                                         <!-- Text input-->
+                                        <div class="form-group">
+                                          <label class="col-md-4 control-label" for="user_name0">Name</label>  
+                                          <div class="col-md-5">
+                                            <input id="user_name0" name="user_name0" type="text" placeholder="Jane Smith" class="form-control input-md">
+                                          </div>
+                                        </div>
+
+                                        <!-- Text input-->
+                                        <div class="form-group">
+                                          <label class="col-md-4 control-label" for="user_email0">Email</label>  
+                                          <div class="col-md-5">
+                                          <input id="user_email0" name="user_email0" type="text" placeholder="Jane@Smith.com" class="form-control input-md">
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="col">
+                                          <!-- <label for="exampleFormControlFile1" class="float-left">Screenshot 2 (Required: 500px x 500px)</label>
+                                          <img id="screenshot2" src="./img/portfolio/submarine.png" class="rounded float-left" alt="..." style="width: 500px; height: 500px; margin-top: 5%; margin-bottom: 5%">
+                                          <input type="file" class="form-control-file" id="exampleFormControlFile1" onchange="readURL(this, 'screenshot2')"> -->
+                                              <label class="control-label float-left" for="user_picture0">Member Photo (Required: 500px x 500px)</label>
+                                              <img id="user_picture0" src="./img/avataaars.svg" class="rounded float-left" alt="..." style="width: 250px; height: 250px; margin-top: 3%; margin-bottom: 3%">
+                                              <input type="file" class="form-control-file" accept=".png,.jpg,.jpeg" onchange="readURL(this, 'user_picture0')">
+                                        </div>
+                                      </div>
+                                      </div>
+                                  </div>
                           </div>
+                    </div>
+                </div>
 
                         <!-- Button -->
                         <div class="form-group">
@@ -193,7 +224,8 @@
           <div class="divider-custom-icon">
               <div class="form-group">
                   <div class="col-md-12">
-                    <button onclick='downloadContent("t1.png","hello world")'  id="submit-button" name="submit-button" class="btn btn-danger">Submit</button>
+                    <!-- <button onclick='downloadContent("t1.png","hello world")'  id="submit-button" name="submit-button" class="btn btn-danger">Submit</button> -->
+                    <button onclick='submitForm()'  id="submit-button" name="submit-button" class="btn btn-danger">Submit</button>
                   </div>
                 </div>
           </div>
