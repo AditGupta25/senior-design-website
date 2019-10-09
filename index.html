@@ -51,7 +51,7 @@
     <div class="container d-flex align-items-center flex-column">
 
       <!-- Masthead Avatar Image -->
-      <img class="masthead-avatar mb-5" src="img/portfolio/dragon.png" alt="">
+      <img class="masthead-avatar mb-5" src="https://upload.wikimedia.org/wikipedia/en/thumb/1/16/Drexel_Dragons_logo.svg/1200px-Drexel_Dragons_logo.svg.png" alt="">
 
       <!-- Masthead Heading -->
       <h1 class="masthead-heading text-uppercase mb-0">Drexel University</h1>
@@ -94,8 +94,8 @@
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="exampleFormControlFile1" class="float-left">Team Logo (Required: 500px x 500px)</label>
-                    <img id="teamLogo" src="./img/portfolio/cake.png" class="rounded float-left" alt="..." style="width: 500px; height: 500px; margin-top: 2%; margin-bottom: 5%">
-                    <input type="file" class="form-control-file" id="exampleFormControlFile1" onchange="readURL(this, 'teamLogo')">
+                    <img id="teamLogo" src="./img/portfolio/noimage.png" class="rounded float-left" alt="..." style="width: 500px; height: 500px; margin-top: 2%; margin-bottom: 5%">
+                    <input accept="image/png, image/jpeg, image/jpg" type="file" class="form-control-file" id="exampleFormControlFile1" onchange="readURL(this, 'teamLogo')">
                 </div>
             </div>
 
@@ -110,13 +110,13 @@
                 <div class="row">
                     <div class="col">
                         <label for="exampleFormControlFile1" class="float-left">Screenshot 1 (Required: 500px x 500px)</label>
-                        <img id="screenshot1" src="./img/portfolio/cabin.png" class="rounded float-left" alt="..." style="width: 500px; height: 500px; margin-top: 5%; margin-bottom: 5%">
-                        <input type="file" class="form-control-file" id="exampleFormControlFile1" onchange="readURL(this, 'screenshot1')">
+                        <img id="screenshot1" src="./img/portfolio/noimage.png" class="rounded float-left" alt="..." style="width: 500px; height: 500px; margin-top: 5%; margin-bottom: 5%">
+                        <input type="file" accept="image/png, image/jpeg, image/jpg" class="form-control-file" id="exampleFormControlFile1" onchange="readURL(this, 'screenshot1')">
                     </div>
                     <div class="col">
                         <label for="exampleFormControlFile1" class="float-left">Screenshot 2 (Required: 500px x 500px)</label>
-                        <img id="screenshot2" src="./img/portfolio/submarine.png" class="rounded float-left" alt="..." style="width: 500px; height: 500px; margin-top: 5%; margin-bottom: 5%">
-                        <input type="file" class="form-control-file" id="exampleFormControlFile1" onchange="readURL(this, 'screenshot2')">
+                        <img id="screenshot2" src="./img/portfolio/noimage.png" class="rounded float-left" alt="..." style="width: 500px; height: 500px; margin-top: 5%; margin-bottom: 5%">
+                        <input type="file" accept="image/png, image/jpeg, image/jpg" class="form-control-file" id="exampleFormControlFile1" onchange="readURL(this, 'screenshot2')">
                     </div>
                 </div>
             </div>
@@ -132,6 +132,97 @@
         </div>
 
         <div class="col-xs-12">
+          <div class="col-md-12" >
+              <h3>Select Advisor</h3>
+              
+                <div class="col-xs-12">
+                    <div class="col-md-12" >
+                      
+                          <label>
+                            <input onclick='radioClick("advisor1")' type="radio" name="advisor1" id="advisor1" checked>
+                            <img style="width: 150px; height:150px" src="http://www.cci.drexel.edu/SeniorDesign/images/JeffSalvage.jpg">
+                          </label>
+                          
+                          <label>
+                            <input onclick='radioClick("advisor2")' type="radio" name="advisor2" id="advisor2">
+                            <img style="width: 150px; height:150px" src="http://cci.drexel.edu/seniordesign/2018_2019/VyB/adit.png">
+                          </label>
+
+                          <label>
+                            <input onclick='radioClick("advisor3")' type="radio" name="advisor3" id="advisor3">
+                            <img style="width: 150px; height:150px" src="http://cci.drexel.edu/seniordesign/2018_2019/ASLive/Vokolos.jpg">
+                          </label>
+                          
+                          <label>
+                            <input onclick='radioClick("advisor4")' type="radio" name="advisor4" id="advisor4">
+                            <img style="width: 150px; height:150px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPIUNMBIuTgt3W8gxARcptBwGFOLZeeJ1U6MG_FL4PRD-ltefy">
+                          </label>
+
+                          <label>
+                            <input onclick='radioClick("advisor5")' type="radio" name="advisor5" id="advisor5">
+                            <img style="width: 150px; height:150px" src="https://drexel.edu/~/media/Images/cci/Stories/hislop_700.ashx?h=700&w=700&hash=261110D37BD7E07724F186EDDCE33C31E0B3D75B">
+                          </label>
+         
+                    </div>
+                </div> 
+                </div>
+          </div>
+
+          <div class="divider-custom divider-dark">
+              <div class="divider-custom-line"></div>
+                  <div class="divider-custom-icon">
+                      <i class="fas fa-star"></i>
+                  </div>
+              <div class="divider-custom-line"></div>
+          </div>
+  
+          <div class="col-xs-12">
+            <div class="col-md-12" >
+                <h3>Stakeholder Information</h3>
+                
+                  <div class="col-xs-12">
+                      <div class="col-md-12" >
+                          <div class="container">
+                            <div class="row">
+                                <div class="col" style="margin-top: 10%">
+                                    <!-- Text input-->
+                                  <div class="form-group">
+                                    <label class="col-md-4 control-label" for="stakeholder_name">Name</label>  
+                                    <div class="col-md-5">
+                                      <input id="stakeholder_name" name="stakeholder_name" type="text" placeholder="jack Smith" class="form-control input-md">
+                                    </div>
+                                  </div>
+
+                                  <!-- Text input-->
+                                  <div class="form-group">
+                                    <label class="col-md-4 control-label" for="stakeholder_email">Email</label>  
+                                    <div class="col-md-5">
+                                    <input id="stakeholder_email" name="stakeholder_email" type="text" placeholder="jack@Smith.com" class="form-control input-md">
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col">
+                                        <label class="control-label float-left" for="stakeholder_picture">Stakeholder Photo (Required: 500px x 500px)</label>
+                                        <img id="stakeholder_picture" name="stakeholder_picture" src="./img/avataaars.svg" class="rounded float-left" alt="..." style="width: 250px; height: 250px; margin-top: 3%; margin-bottom: 3%">
+                                        <input accept="image/png, image/jpeg, image/jpg" type="file" class="form-control-file" onchange="readURL(this, 'stakeholder_picture')">
+                                  </div>
+                                </div>
+                                </div>
+                      </div>
+                  </div> 
+                  </div>
+            </div>  
+
+        <!-- Icon Divider -->
+        <div class="divider-custom divider-dark">
+          <div class="divider-custom-line"></div>
+              <div class="divider-custom-icon">
+                  <i class="fas fa-star"></i>
+              </div>
+          <div class="divider-custom-line"></div>
+      </div>
+
+        <div class="col-xs-12">
             <div class="col-md-12" >
                 <h3> Team Members</h3>
                 
@@ -140,34 +231,6 @@
                     <div class="col-md-12" >
                           <div id="field">
                             <div id="field0">
-                                <!-- Text input-->
-                                <!-- <div class="form-group">
-                                  <label class="col-md-4 control-label" for="user_name0">Name</label>  
-                                  <div class="col-md-5">
-                                    <input id="user_name0" name="user_name0" type="text" placeholder="Jane Smith" class="form-control input-md">
-                                  </div>
-                                </div> -->
-
-                                <!-- Text input-->
-                                <!-- <div class="form-group">
-                                  <label class="col-md-4 control-label" for="user_email0">Email</label>  
-                                  <div class="col-md-5">
-                                  <input id="user_email0" name="user_email0" type="text" placeholder="Jane@Smith.com" class="form-control input-md">
-                                    
-                                  </div>
-                                </div> -->
-                              
-                                
-                                <!-- File Button --> 
-                                <!-- <div class="form-group">
-                                  <label class="col-md-4 control-label" for="user_picture0">Member Photo (Required: 500px x 500px)</label>
-                                  <div class="col-md-4">
-                                              <input type="file" id="user_picture0" name="user_picture0" class="input-file" accept=".png,.jpg,.jpeg">
-                                    <div id="action_jsondisplay">    
-                                    </div>
-                                  </div>
-                                </div> -->
-
                                 <div class="container">
                                   <div class="row">
                                       <div class="col" style="margin-top: 10%">
@@ -193,7 +256,7 @@
                                           <input type="file" class="form-control-file" id="exampleFormControlFile1" onchange="readURL(this, 'screenshot2')"> -->
                                               <label class="control-label float-left" for="user_picture0">Member Photo (Required: 500px x 500px)</label>
                                               <img id="user_picture0" name="user_picture0" src="./img/avataaars.svg" class="rounded float-left" alt="..." style="width: 250px; height: 250px; margin-top: 3%; margin-bottom: 3%">
-                                              <input type="file" class="form-control-file" accept=".png,.jpg,.jpeg" onchange="readURL(this, 'user_picture0')">
+                                              <input accept="image/png, image/jpeg, image/jpg" type="file" class="form-control-file" onchange="readURL(this, 'user_picture0')">
                                         </div>
                                       </div>
                                       </div>
