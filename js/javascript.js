@@ -102,6 +102,35 @@ $(document).ready(function () {
 
 });
 
+$(document).ready(function () {
+    var next = 0;
+    $("#add-more-stakeholder").click(function(e){
+        e.preventDefault();
+        var addto = "#stakeholder_field" + next;
+        var addRemove = "#stakeholder_field" + (next);
+        next = next + 1;
+        
+        // var newIn = '<div id="field'+ next +'" name="field'+ next +'"><div class=container><div class=row><div class=col style=margin-top:10%><div class=form-group><label class="control-label col-md-4"for=user_name'+ next +'">Name</label><div class=col-md-5><input class="form-control input-md"id=user_name'+ next +'" name=user_name'+ next +'" placeholder="Jane Smith"></div></div><div class=form-group><label class="control-label col-md-4"for=user_email'+ next +'">Email</label><div class=col-md-5><input class="form-control input-md"id=user_email'+ next +'" name=user_email'+ next +'" placeholder=Jane@Smith.com></div></div></div><div class=col><label class="float-left control-label" for=user_picture'+ next +'">Member Photo (Required: 500px x 500px)</label> <img alt="..." name="user_picture'+ next +'" class="float-left rounded" id="user_picture'+ next +'" src="./img/avataaars.svg" style="width:250px;height:250px;margin-top:3%;margin-bottom:3%"> <input type="file" accept=.png,.jpg,.jpeg class=form-control-file onchange=\"readURL(this, \'user_picture'+ next +'\')\"></div>'
+        var newIn = '<div id="stakeholder_field'+ next +'" name="stakeholder_field'+ next +'"><div class=container><div class=row><div class=col style=margin-top:10%><div class=form-group><label class="control-label col-md-4"for=stakeholder_name'+ next +'">Name</label><div class=col-md-5><input class="form-control input-md"id=stakeholder_name'+ next +'" name=stakeholder_name'+ next +'" placeholder="Jane Smith"></div></div><div class=form-group><label class="control-label col-md-4"for=stakeholder_email'+ next +'">Email</label><div class=col-md-5><input class="form-control input-md"id=stakeholder_email'+ next +'" name=stakeholder_email'+ next +'" placeholder=Jane@Smith.com></div></div></div><div class=col><label class="float-left control-label" for=stakeholder_picture'+ next +'">Stakeholder Photo (Required: 500px x 500px)</label> <img alt="..." name="stakeholder_picture'+ next +'" class="float-left rounded" id="stakeholder_picture'+ next +'" src="./img/avataaars.svg" style="width:250px;height:250px;margin-top:3%;margin-bottom:3%"> <input type="file" accept=.png,.jpg,.jpeg class=form-control-file onchange=\"readURL(this, \'stakeholder_picture'+ next +'\')\"></div>';
+        var newInput = $(newIn);
+        var removeBtn = '<button id="remove' + (next - 1) + '" class="btn btn-danger remove-me" >Remove</button></div></div><div id="stakeholder_field">';
+        var removeButton = $(removeBtn);
+        $(addto).after(newInput);
+        $(addRemove).after(removeButton);
+        $("#stakeholder_field" + next).attr('data-source',$(addto).attr('data-source'));
+        $("#count").val(next);  
+        
+            $('.remove-me').click(function(e){
+                e.preventDefault();
+                var fieldNum = this.id.charAt(this.id.length-1);
+                var fieldID = "#stakeholder_field" + fieldNum;
+                $(this).remove();
+                $(fieldID).remove();
+            });
+    });
+
+});
+
 function downloadContent(name, content) {
     var atag = document.createElement("a");
     var file = new Blob([content], {type: 'text/plain'});
