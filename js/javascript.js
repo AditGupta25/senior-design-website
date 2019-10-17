@@ -23,6 +23,7 @@ function readURL(input, imgId) {
 
 
         reader.onload = function (e) {
+            // console.log(e.target.result)
             img.src = e.target.result;
             img.onload = function() {
                 if(img.naturalWidth == 500 && img.naturalHeight == 500){
@@ -67,6 +68,12 @@ function readURL(input, imgId) {
                     alert("Please make sure your image size is 500px x 500px")
 
                     $('#' + imgId+"_input").val('')
+
+                    if(imgId.includes("stakeholder_picture") || imgId.includes("user_picture")){
+                        document.getElementById(imgId).src = "./img/avataaars.svg";
+                    }else{
+                        document.getElementById(imgId).src = "./img/portfolio/noimage.png";
+                    }
                 
                 }
             }
@@ -85,7 +92,7 @@ $(document).ready(function () {
         var addRemove = "#field" + (next);
         next = next + 1;
         
-        var newIn = '<div id="field'+ next +'" name="field'+ next +'"><div class=container><div class=row><div class=col style=margin-top:10%><div class=form-group><label class="control-label col-md-6"for=user_name'+ next +'">Name</label><div class=col-md-5><input class="form-control input-md"id=user_name'+ next +'" name=user_name'+ next +'" placeholder="Jane Smith"></div></div><div class=form-group><label class="control-label col-md-6"for=user_email'+ next +'">Email</label><div class=col-md-5><input class="form-control input-md"id=user_email'+ next +'" name=user_email'+ next +'" placeholder=Jane@Smith.com></div></div></div><div class=col><label class="float-left control-label" for=user_picture'+ next +'">Member Photo (Required: 500px x 500px)</label> <img alt="..." name="user_picture'+ next +'" class="float-left rounded" id="user_picture'+ next +'" src="./img/avataaars.svg" style="width:250px;height:250px;margin-top:3%;margin-bottom:3%"> <input id="user_picture'+ next +'_input" type="file" accept=.png,.jpg,.jpeg class=form-control-file onchange=\"readURL(this, \'user_picture'+ next +'\')\"></div>'
+        var newIn = '<div id="field'+ next +'" name="field'+ next +'"><div class=container><div class=row><div class=col style=margin-top:10%><div class=form-group><label class="control-label col-md-6"for=user_name'+ next +'">Name</label><div class=col-md-5><input class="form-control input-md"id=user_name'+ next +'" name=user_name'+ next +'" placeholder="Jane Smith"></div></div><div class=form-group><label class="control-label col-md-6"for=user_email'+ next +'">Email</label><div class=col-md-5><input class="form-control input-md"id=user_email'+ next +'" name=user_email'+ next +'" placeholder=Jane@Smith.com></div></div></div><div class=col><label class="float-left control-label" for=user_picture'+ next +'">Member Photo (Required: 500px x 500px)</label> <img alt="..." name="user_picture'+ next +'" class="float-left rounded" id="user_picture'+ next +'" src="./img/avataaars.svg" style="width:250px;height:250px;margin-top:3%;margin-bottom:3%"> <input id="user_picture'+ next +'_input" type="file" accept=.png,.jpg,.jpeg class="form-control-file float-right" onchange=\"readURL(this, \'user_picture'+ next +'\')\"></div>'
         var newInput = $(newIn);
         var removeBtn = '<button id="remove' + (next - 1) + '" class="btn btn-danger remove-me" >Remove</button></div></div><div id="field">';
         var removeButton = $(removeBtn);
@@ -114,7 +121,7 @@ $(document).ready(function () {
         next = next + 1;
         
         // var newIn = '<div id="field'+ next +'" name="field'+ next +'"><div class=container><div class=row><div class=col style=margin-top:10%><div class=form-group><label class="control-label col-md-6"for=user_name'+ next +'">Name</label><div class=col-md-5><input class="form-control input-md"id=user_name'+ next +'" name=user_name'+ next +'" placeholder="Jane Smith"></div></div><div class=form-group><label class="control-label col-md-6"for=user_email'+ next +'">Email</label><div class=col-md-5><input class="form-control input-md"id=user_email'+ next +'" name=user_email'+ next +'" placeholder=Jane@Smith.com></div></div></div><div class=col><label class="float-left control-label" for=user_picture'+ next +'">Member Photo (Required: 500px x 500px)</label> <img alt="..." name="user_picture'+ next +'" class="float-left rounded" id="user_picture'+ next +'" src="./img/avataaars.svg" style="width:250px;height:250px;margin-top:3%;margin-bottom:3%"> <input type="file" accept=.png,.jpg,.jpeg class=form-control-file onchange=\"readURL(this, \'user_picture'+ next +'\')\"></div>'
-        var newIn = '<div id="stakeholder_field'+ next +'" name="stakeholder_field'+ next +'"><div class=container><div class=row><div class=col style=margin-top:10%><div class=form-group><label class="control-label col-md-6"for=stakeholder_name'+ next +'">Name</label><div class=col-md-5><input class="form-control input-md"id=stakeholder_name'+ next +'" name=stakeholder_name'+ next +'" placeholder="Jane Smith"></div></div><div class=form-group><label class="control-label col-md-6"for=stakeholder_email'+ next +'">Email</label><div class=col-md-5><input class="form-control input-md"id=stakeholder_email'+ next +'" name=stakeholder_email'+ next +'" placeholder=Jane@Smith.com></div></div></div><div class=col><label class="float-left control-label" for=stakeholder_picture'+ next +'">Stakeholder Photo (Required: 500px x 500px)</label> <img alt="..."  name="stakeholder_picture'+ next +'" class="float-left rounded" id="stakeholder_picture'+ next +'" src="./img/avataaars.svg" style="width:250px;height:250px;margin-top:3%;margin-bottom:3%"> <input id="stakeholder_picture'+ next +'_input" type="file" accept=.png,.jpg,.jpeg class=form-control-file onchange=\"readURL(this, \'stakeholder_picture'+ next +'\')\"></div>';
+        var newIn = '<div id="stakeholder_field'+ next +'" name="stakeholder_field'+ next +'"><div class=container><div class=row><div class=col style=margin-top:10%><div class=form-group><label class="control-label col-md-6"for=stakeholder_name'+ next +'">Name</label><div class=col-md-5><input class="form-control input-md"id=stakeholder_name'+ next +'" name=stakeholder_name'+ next +'" placeholder="Jane Smith"></div></div><div class=form-group><label class="control-label col-md-6"for=stakeholder_email'+ next +'">Email</label><div class=col-md-5><input class="form-control input-md"id=stakeholder_email'+ next +'" name=stakeholder_email'+ next +'" placeholder=Jane@Smith.com></div></div></div><div class=col><label class="float-left control-label" for=stakeholder_picture'+ next +'">Stakeholder Photo (Required: 500px x 500px)</label> <img alt="..."  name="stakeholder_picture'+ next +'" class="float-left rounded" id="stakeholder_picture'+ next +'" src="./img/avataaars.svg" style="width:250px;height:250px;margin-top:3%;margin-bottom:3%"> <input id="stakeholder_picture'+ next +'_input" type="file" accept=.png,.jpg,.jpeg class="form-control-file float-right" onchange=\"readURL(this, \'stakeholder_picture'+ next +'\')\"></div>';
         var newInput = $(newIn);
         var removeBtn = '<button id="remove' + (next - 1) + '" class="btn btn-danger remove-me" >Remove</button></div></div><div id="stakeholder_field">';
         var removeButton = $(removeBtn);
@@ -368,46 +375,59 @@ function createWebsiteTemplate(){
 
 
 function clearWebsite(){
-    globalInformation.teamMemberPhotos = {}
+    // globalInformation.teamMemberPhotos = {}
     globalInformation.teamMemberNames = []
     globalInformation.teamMemberEmails = []
-    globalInformation.stakeholder = {}
+    // globalInformation.stakeholder = {}
     globalInformation.stakeholderNames = []
     globalInformation.stakeholderEmails = []
-
-    // for(var i=1; i<10; i++){
-    //     try{
-    //         $('#remove'+i).trigger('click');
-    //     }catch(err){
-    //         console.log(err)
-    //     }
-    // }
-
-    // get rid of section 
+}
 
 
-    // globalInformation = {
-    //     projectName: "",
-    //     oneLineProjectDesc : "",
-    //     teamLogo : "",
-    //     abstract : "",
-    //     screenshot1: "",
-    //     screenshot2: "",
-    //     teamMemberPhotos: {},
-    //     teamMemberNames: [],
-    //     teamMemberEmails: [],
-    //     advisor: "",
-    //     advisorImage: "",
-    //     advisorEmail: "",
-    //     stakeholder: {},
-    //     stakeholderNames: [],
-    //     stakeholderEmails: []
-    // }
+// get all pictures and validate sizes
+function validatePictureSizes(){
+    // validate logo
+    var logo_image = $( "img[id*='teamLogo']" );
+    for(var i=0; i<logo_image.length; i++){
+        if(document.getElementById(logo_image[i].id).naturalHeight != 500 || document.getElementById(logo_image[i].id).naturalWidth != 500 ){
+            alert("Your " + logo_image[i].id + " is: " + document.getElementById(logo_image[i].id).naturalHeight + " x " + document.getElementById(logo_image[i].id).naturalWidth + ". Please make sure " + logo_image[i].id +" is 500px by 500px exactly!")
+            return(true)
+        }
+    }
+
+    // validate screenshots
+    var screenshots = $( "img[id*='screenshot']" );
+    for(var i=0; i<screenshots.length; i++){
+        if(document.getElementById(screenshots[i].id).naturalHeight != 500 || document.getElementById(screenshots[i].id).naturalWidth != 500 ){
+            alert("Your " + screenshots[i].id + " is: " + document.getElementById(screenshots[i].id).naturalHeight + " x " + document.getElementById(screenshots[i].id).naturalWidth + ". Please make sure " + screenshots[i].id +" is 500px by 500px exactly!")
+            return(true)
+        }
+    }
+
+    // validate stakeholders
+    var stakeHolder_images = $( "img[id*='stakeholder_picture']" );
+    for(var i=0; i<stakeHolder_images.length; i++){
+        if(document.getElementById(stakeHolder_images[i].id).naturalHeight != 500 || document.getElementById(stakeHolder_images[i].id).naturalWidth != 500 ){
+            alert("Your " + stakeHolder_images[i].id + " is: " + document.getElementById(stakeHolder_images[i].id).naturalHeight + " x " + document.getElementById(stakeHolder_images[i].id).naturalWidth + ". Please make sure " + stakeHolder_images[i].id +" is 500px by 500px exactly!")
+            return(true)
+        }
+    }
+
+    // validate user images
+    var user_images = $( "img[id*='user_picture']" );
+    for(var i=0; i<user_images.length; i++){
+        if(document.getElementById(user_images[i].id).naturalHeight != 500 || document.getElementById(user_images[i].id).naturalWidth != 500 ){
+            alert("Your " + user_images[i].id + " is: " + document.getElementById(user_images[i].id).naturalHeight + " x " + document.getElementById(user_images[i].id).naturalWidth + ". Please make sure " + user_images[i].id +" is 500px by 500px exactly!")
+            return(true)
+        }
+    }
+
+    return (false)
+
 }
 
 
 function submitForm(){
-
     // validate emails from users and stakeholders
     var EMAIL_VALIDATION_ERROR = false;
 
@@ -458,21 +478,31 @@ function submitForm(){
         }
     }
 
+
+    // Double check all picture sizes
+    PICTURE_SIZE_ERROR = validatePictureSizes()
+
+
     if(EMAIL_VALIDATION_ERROR == true){
         // there was an error in the email
-        alert("There was an error generating your team website!")
+        this.clearWebsite()
+        alert("Please fix emails and retry!")
     }else{
-
-        //Validate inputs
-        if(this.validateInputs()){
-            var userAttributes = this.getUserAttributes();
-            if(userAttributes == "error"){
-                this.clearWebsite()
-                alert("There was an error generating your team website!")
-            }else{
-                console.log(globalInformation)
-                this.createWebsiteTemplate()
-                alert("Congratulations! Your site has been created!")
+        if(PICTURE_SIZE_ERROR == true){
+            // There is a picture size error
+            alert("Please picture sizes and retry!")
+        }else{
+            //Validate inputs
+            if(this.validateInputs()){
+                var userAttributes = this.getUserAttributes();
+                if(userAttributes == "error"){
+                    this.clearWebsite()
+                    alert("There was an error generating your team website!")
+                }else{
+                    console.log(globalInformation)
+                    this.createWebsiteTemplate()
+                    alert("Congratulations! Your site has been created!")
+                }
             }
         }
     }
