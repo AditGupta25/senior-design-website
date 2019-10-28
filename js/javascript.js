@@ -316,42 +316,42 @@ function download(filename, text) {
 function createWebsiteTemplate(){
 
     // Create team section of website
-    // var FinalMemberSection="";
-    // for(var i=0; i< globalInformation.teamMemberNames.length; i++){
-    //     var pic = 'user_picture' + i;
-    //     console.log(pic)
-    //     console.log(globalInformation.teamMemberPhotos[pic])
-    //     var teamMemberInfo = '<div class="row"> <div class="col"> <img id="user_picture'+i+'" name="user_picture'+i+'" src="'+globalInformation.teamMemberPhotos[pic]+'" class="rounded float-left" alt="..." style="width: 250px; height: 250px; margin-top: 3%; margin-bottom: 3%"> </div><div class="col" style="margin-top: 10%"> <div class="form-group"> <label class="col-md-6 control-label" for="user_name0">Name: ' + globalInformation.teamMemberNames[i] + '</label> </div><div class="form-group"> <label class="col-md-6 control-label" for="user_email0">Email: ' + globalInformation.teamMemberEmails[i] + '</label> </div></div></div>'
-    //     var FinalMemberSection = FinalMemberSection + teamMemberInfo;
-    // }
+    var FinalMemberSection="";
+    for(var i=0; i< globalInformation.teamMemberNames.length; i++){
+        var pic = 'user_picture' + i;
+        console.log(pic)
+        console.log(globalInformation.teamMemberPhotos[pic])
+        var teamMemberInfo = '<div class="row"> <div class="col"> <img id="user_picture'+i+'" name="user_picture'+i+'" src="'+globalInformation.teamMemberPhotos[pic]+'" class="rounded float-left" alt="..." style="width: 250px; height: 250px; margin-top: 3%; margin-bottom: 3%"> </div><div class="col" style="margin-top: 10%"> <div class="form-group"> <label class="col-md-6 control-label" for="user_name0">Name: ' + globalInformation.teamMemberNames[i] + '</label> </div><div class="form-group"> <label class="col-md-6 control-label" for="user_email0">Email: ' + globalInformation.teamMemberEmails[i] + '</label> </div></div></div>'
+        var FinalMemberSection = FinalMemberSection + teamMemberInfo;
+    }
     
 
     // Create team section of website
-    // var FinalStakeholderSection="";
-    // for(var i=0; i< globalInformation.stakeholderNames.length; i++){
-    //     var pic = 'stakeholder_picture' + i;
-    //     var stakeholderInfo = '<div class="row"> <div class="col"> <img id="stakeholder_picture'+i+'" name="stakeholder_picture'+i+'" src="'+globalInformation.stakeholder[pic]+'" class="rounded float-left" alt="..." style="width: 250px; height: 250px; margin-top: 3%; margin-bottom: 3%"> </div><div class="col" style="margin-top: 10%"> <div class="form-group"> <label class="col-md-6 control-label" for="stakeholder_name0">Name: ' + globalInformation.stakeholderNames[i] + '</label> </div><div class="form-group"> <label class="col-md-6 control-label" for="user_email0">Email: ' + globalInformation.stakeholderEmails[i] + '</label> </div></div></div>'
-    //      FinalStakeholderSection = FinalStakeholderSection + stakeholderInfo;
-    // }
+    var FinalStakeholderSection="";
+    for(var i=0; i< globalInformation.stakeholderNames.length; i++){
+        var pic = 'stakeholder_picture' + i;
+        var stakeholderInfo = '<div class="row"> <div class="col"> <img id="stakeholder_picture'+i+'" name="stakeholder_picture'+i+'" src="'+globalInformation.stakeholder[pic]+'" class="rounded float-left" alt="..." style="width: 250px; height: 250px; margin-top: 3%; margin-bottom: 3%"> </div><div class="col" style="margin-top: 10%"> <div class="form-group"> <label class="col-md-6 control-label" for="stakeholder_name0">Name: ' + globalInformation.stakeholderNames[i] + '</label> </div><div class="form-group"> <label class="col-md-6 control-label" for="user_email0">Email: ' + globalInformation.stakeholderEmails[i] + '</label> </div></div></div>'
+         FinalStakeholderSection = FinalStakeholderSection + stakeholderInfo;
+    }
 
     // validate stakeholders
-    var FinalStakeholderSection="";
-    var stakeHolder_images = $( "img[id*='stakeholder_picture']" );
-    for(var i=0; i<stakeHolder_images.length; i++){
-    //    console.log(stakeHolder_images[i].src)
-       var stakeholderInfo = '<div class="row"> <div class="col"> <img id="stakeholder_picture'+i+'" name="stakeholder_picture'+i+'" src="'+stakeHolder_images[i].src+'" class="rounded float-left" alt="..." style="width: 250px; height: 250px; margin-top: 3%; margin-bottom: 3%"> </div><div class="col" style="margin-top: 10%"> <div class="form-group"> <label class="col-md-6 control-label" for="stakeholder_name0">Name: ' + globalInformation.stakeholderNames[i] + '</label> </div><div class="form-group"> <label class="col-md-6 control-label" for="user_email0">Email: ' + globalInformation.stakeholderEmails[i] + '</label> </div></div></div>'
-       FinalStakeholderSection = FinalStakeholderSection + stakeholderInfo;
+    // var FinalStakeholderSection="";
+    // var stakeHolder_images = $( "img[id*='stakeholder_picture']" );
+    // for(var i=0; i<stakeHolder_images.length; i++){
+    // //    console.log(stakeHolder_images[i].src)
+    //    var stakeholderInfo = '<div class="row"> <div class="col"> <img id="stakeholder_picture'+i+'" name="stakeholder_picture'+i+'" src="'+stakeHolder_images[i].src+'" class="rounded float-left" alt="..." style="width: 250px; height: 250px; margin-top: 3%; margin-bottom: 3%"> </div><div class="col" style="margin-top: 10%"> <div class="form-group"> <label class="col-md-6 control-label" for="stakeholder_name0">Name: ' + globalInformation.stakeholderNames[i] + '</label> </div><div class="form-group"> <label class="col-md-6 control-label" for="user_email0">Email: ' + globalInformation.stakeholderEmails[i] + '</label> </div></div></div>'
+    //    FinalStakeholderSection = FinalStakeholderSection + stakeholderInfo;
 
-    }
+    // }
 
     // validate user images
-    var FinalMemberSection="";
-    var user_images = $( "img[id*='user_picture']" );
-    for(var i=0; i<user_images.length; i++){
-        // console.log(user_images[i].src)
-        var teamMemberInfo = '<div class="row"> <div class="col"> <img id="user_picture'+i+'" name="user_picture'+i+'" src="'+user_images[i].src+'" class="rounded float-left" alt="..." style="width: 250px; height: 250px; margin-top: 3%; margin-bottom: 3%"> </div><div class="col" style="margin-top: 10%"> <div class="form-group"> <label class="col-md-6 control-label" for="user_name0">Name: ' + globalInformation.teamMemberNames[i] + '</label> </div><div class="form-group"> <label class="col-md-6 control-label" for="user_email0">Email: ' + globalInformation.teamMemberEmails[i] + '</label> </div></div></div>'
-        var FinalMemberSection = FinalMemberSection + teamMemberInfo;
-    }
+    // var FinalMemberSection="";
+    // var user_images = $( "img[id*='user_picture']" );
+    // for(var i=0; i<user_images.length; i++){
+    //     // console.log(user_images[i].src)
+    //     var teamMemberInfo = '<div class="row"> <div class="col"> <img id="user_picture'+i+'" name="user_picture'+i+'" src="'+user_images[i].src+'" class="rounded float-left" alt="..." style="width: 250px; height: 250px; margin-top: 3%; margin-bottom: 3%"> </div><div class="col" style="margin-top: 10%"> <div class="form-group"> <label class="col-md-6 control-label" for="user_name0">Name: ' + globalInformation.teamMemberNames[i] + '</label> </div><div class="form-group"> <label class="col-md-6 control-label" for="user_email0">Email: ' + globalInformation.teamMemberEmails[i] + '</label> </div></div></div>'
+    //     var FinalMemberSection = FinalMemberSection + teamMemberInfo;
+    // }
 
     // Create advisor section
     if(globalInformation.advisor == "salvage"){
