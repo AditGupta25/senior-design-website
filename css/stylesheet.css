@@ -1,9 +1,0 @@
-.bg-drexel {
-    background-color: rgb(17, 41, 75) !important;
-  }
-  
-  a.bg-drexel:hover, a.bg-drexel:focus,
-  button.bg-secondary:hover,
-  button.bg-secondary:focus {
-    background-color: rgb(44, 60, 74) !important;
-  }
