@@ -379,9 +379,9 @@ function createWebsiteTemplate(){
         // var AdvisorTemplate = ' <div class="divider-custom divider-dark"> <div class="divider-custom-line"></div><div class="divider-custom-icon"> <i class="fas fa-star"></i> </div><div class="divider-custom-line"></div></div><div class="col-xs-12"> <div class="col-md-12" > <h3>Behind The Scenes</h3> <div class="row"> <div class="col" ><h5>Advisor</h5> <h6>'+name+'</h6> <label> <img style="width: 250px; height:250px" src="'+globalInformation.advisorImage+'"> </label> </div></div><h5>Stakeholders</h5>'+stakeholderInfo+'</div></div>';
         var AdvisorTemplate = '<div class="divider-custom divider-dark"><div class="divider-custom-line"></div><div class="divider-custom-icon"> <i class="fas fa-star"></i> </div><div class="divider-custom-line"></div></div><div class="col-xs-12" style="padding-left: 3.25%; padding-right: 3.25%"><div class="col-md-12"><h3>Behind The Scenes</h3><div class="row"><div class="col"> <img class="rounded float-left" style="width: 250px; height:250px" src="'+globalInformation.advisorImage+'"> </div><div class="col" style="margin-top: 10%"><div class="form-group"><label class="col-md-6 control-label">Name: ' + name + '</label></div><div class="form-group"><label class="col-md-6 control-label">Email: ' + email + '</label></div></div></div>'+FinalStakeholderSection+'</div></div>'; 
 
-    }else if(globalInformation.advisor == "weber"){
-        var name = "Dr. Rosina Weber";
-        var email = "rw37@drexel.edu";
+    }else if(globalInformation.advisor == "heverin"){
+        var name = "Dr. Thomas Heverin";
+        var email = "th424@drexel.edu";
         // var AdvisorTemplate = ' <div class="divider-custom divider-dark"> <div class="divider-custom-line"></div><div class="divider-custom-icon"> <i class="fas fa-star"></i> </div><div class="divider-custom-line"></div></div><div class="col-xs-12"> <div class="col-md-12" > <h3>Behind The Scenes</h3> <div class="row"> <div class="col" ><h5>Advisor</h5> <h6>'+name+'</h6> <label> <img style="width: 250px; height:250px" src="'+globalInformation.advisorImage+'"> </label> </div></div><h5>Stakeholders</h5>'+stakeholderInfo+'</div></div>';
         var AdvisorTemplate = '<div class="divider-custom divider-dark"><div class="divider-custom-line"></div><div class="divider-custom-icon"> <i class="fas fa-star"></i> </div><div class="divider-custom-line"></div></div><div class="col-xs-12" style="padding-left: 3.25%; padding-right: 3.25%"><div class="col-md-12"><h3>Behind The Scenes</h3><div class="row"><div class="col"> <img class="rounded float-left" style="width: 250px; height:250px" src="'+globalInformation.advisorImage+'"> </div><div class="col" style="margin-top: 10%"><div class="form-group"><label class="col-md-6 control-label">Name: ' + name + '</label></div><div class="form-group"><label class="col-md-6 control-label">Email: ' + email + '</label></div></div></div>'+FinalStakeholderSection+'</div></div>'; 
 
@@ -603,8 +603,8 @@ function radioClick(advisor){
         document.getElementById("advisor4").checked = true;
         document.getElementById("advisor5").checked = false;
 
-        globalInformation.advisor = "weber";
-        globalInformation.advisorImage = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPIUNMBIuTgt3W8gxARcptBwGFOLZeeJ1U6MG_FL4PRD-ltefy";
+        globalInformation.advisor = "heverin";
+        globalInformation.advisorImage = "https://media-exp1.licdn.com/dms/image/C4E03AQH3EO4UII_G1Q/profile-displayphoto-shrink_200_200/0?e=1606348800&v=beta&t=GMYQlHzuiCXhsIagvTT1rXoSINHubHpNk59qpIjwLnw";
     }
     if(advisor == "advisor5"){
         document.getElementById("advisor1").checked = false;
