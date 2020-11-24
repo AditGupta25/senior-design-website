@@ -118,12 +118,14 @@ Example
 
 ## Common Questions
 1) I can not access the server to add web-pages
-If you are unable to access the server, please contact [Mike Galloway](https://drexel.edu/cci/about/directory/G/Galloway-Mike/) and [Jeff Salvage](https://drexel.edu/cci/about/directory/S/Salvage-Jeffrey/)
+
+- If you are unable to access the server, please contact [Mike Galloway](https://drexel.edu/cci/about/directory/G/Galloway-Mike/) and [Jeff Salvage](https://drexel.edu/cci/about/directory/S/Salvage-Jeffrey/)
 
 2) How should I ask students to submit their websites? 
-In previous years, I have created a "Google Form". (Here is an example)[https://docs.google.com/forms/d/e/1FAIpQLSdSNciyfzGmhNCpmaFolh4ug5hpqo2_hEmqdhDRjiG2TyeN-g/viewform]
 
-If you do decide to collect mails in Google Form, I recommend uncommenting a bit of code in [/js/javascript.js](https://github.com/AditGupta25/senior-design-website/blob/develop/website-generator/js/javascript.js) file. Alter line 558 below, and add the location to the Google Form, so the student are redirected to that submission site as soon as they create their own site. 
+- In previous years, I have created a "Google Form". (Here is an example)[https://docs.google.com/forms/d/e/1FAIpQLSdSNciyfzGmhNCpmaFolh4ug5hpqo2_hEmqdhDRjiG2TyeN-g/viewform]
+
+- If you do decide to collect mails in Google Form, I recommend uncommenting a bit of code in [/js/javascript.js](https://github.com/AditGupta25/senior-design-website/blob/develop/website-generator/js/javascript.js) file. Alter line 558 below, and add the location to the Google Form, so the student are redirected to that submission site as soon as they create their own site. 
 
 ```javascript
     557 // CHANGE THIS LOCATION WITH GOOGLE FORMS LOCATION
@@ -133,19 +135,32 @@ If you do decide to collect mails in Google Form, I recommend uncommenting a bit
 
 3) What if a change is required on the student's website
 
+- If it is a small change, simply make it yourself! If it is a big change like a picture format problem, contact the student. 
+
+
 4) Where to past webpages go?
+
+- The past webpages stay on the server, just rename the parent folder to a past year (Example: 2020_2021)
 
 5) How do I add the webpages for the Final Senior Design Showcase 
 
+- For senior design showcase, you will need to update the "index.html" page in the root directory of the server.
+
 6) How do I deal with bugs? 
+
+- Most changes will be made to the 2 files described in the earlier section (index.html and javascript.js)
 
 7) Students see a web page without styling when they create their site, why? 
 
+- This is normal. When students generate the site, it is not yet connected to the styling sheet located on the server. When you drag and drop the file on the server, it will automatically connect. 
+
 8) Images do not have correct aspect ratio. Why? 
 
-9) What could the students mess up on? 
+- Often students will crop or edit existing images to make them fit in the pixel requirements. They will stretch or shrink images. Ask them to recreate the faulty images. 
 
-10) I fixed a bug in the site, how do I re-deploy the new version? 
 
+9) I fixed a bug in the site, how do I re-deploy the new version? 
+
+- After making sure to update Github, deploy the code on the server with the instructions in one of the sections above named "Deploying Website"
 
 The senior design website creator was made by Adit Gupta. Please feel free to reach out to Adit at ag3338@drexel.edu, in the case there are any questions.
