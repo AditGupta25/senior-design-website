@@ -11,17 +11,17 @@ git clone https://github.com/AditGupta25/senior-design-website.git
 
 Once you have cloned the repo, you will see (2) folders:
 1) senior-design-site: This can be ignored. This is just a copy of the senior design main website hosted online. It was put here just for testing purposes.
-2) website-generator: This is where the magic happens. When you open this folder, you will see a few directories and files. Nonethless, you will only interact with two files! 
+2) website-generator: This is where the magic happens. When you open this folder, you will see a few directories and files. Nonetheless, you will only interact with two files! 
     (2.1) index.html --> this is the main user experience students will interact with. Hosted [here](http://www.cci.drexel.edu/SeniorDesign/2020_2021/template/index.html?fbclid=IwAR1lyYtR4I0iD-KxFC1Sb9SZNxagq29t9NNb8rZBuVnlnZediDvzosq1IDA).
     (2.2) /js/javascript.html --> This is what happens in the backend after the student clicks "submit" to create the website. 
 
 
-Here is a summary of [/js/javascript.js](https://github.com/AditGupta25/senior-design-website/blob/develop/website-generator/js/javascript.js). When a student creates a webpage, when the click submit, the following happens: 
-1) submitForm() is called from index.html. In this method, we check to see if the students are attaching a video, if the emails for all individuals are formatted correctly, and if all pictures are formatted correctly (500px x 500px)
+Here is a summary of [/js/javascript.js](https://github.com/AditGupta25/senior-design-website/blob/develop/website-generator/js/javascript.js). When a student creates a webpage when they click submit, the following happens: 
+1) submitForm() is called from index.html. In this method, we check to see if the students are attaching a video if the emails for all individuals are formatted correctly, and if all pictures are formatted correctly (500px x 500px)
 
 2) If all validation is correct, we then go to createWebsiteTemplate()
 
-3) In createWebsiteTemplate(), we construct the website one section at a time. First we construct the team section (adding names, pictures, emails). Then we construct the stakeholders section. After that, we construct the advisors section. Lastly, we create the entire webpage in the "htmlTemplate" variable. There are two variations of this, depending on whether there is a vidoe being submitted or not. 
+3) In createWebsiteTemplate(), we construct the website one section at a time. First, we construct the team section (adding names, pictures, emails). Then we construct the stakeholders' section. After that, we construct the advisors' section. Lastly, we create the entire webpage in the "htmlTemplate" variable. There are two variations of this, depending on whether there is a video being submitted or not. 
 
 4) Lastly, the downloadContent() method, takes (2) parameters - first being the file name to download, and second being the content within the file. We want to download the file if no flags were raised in the validation.
 
@@ -36,9 +36,9 @@ smb://webserv.ischool.drexel.edu/wwwroot/SeniorDesign
 If you are still unable to access the server, please contact [Mike Galloway](https://drexel.edu/cci/about/directory/G/Galloway-Mike/) and [Jeff Salvage](https://drexel.edu/cci/about/directory/S/Salvage-Jeffrey/)
 
 ## Deploying Website
-<!-- In this section we will go over two types of deployments that you may have to deal with: -->
+<!-- In this section, we will go over two types of deployments that you may have to deal with: -->
 1) Adding a new version of the website generator to the server
-- If you update the website generator (often you will either update the index.html or js/javascript.js page) - deploying it is simply. 
+- If you update the website generator (often you will either update the index.html or js/javascript.js page) - deploying it is simple. 
 - Refer to the previous section to see how to get the VPN up and working. You need to be connected to the VPN to get to the server. 
 - Once you have logged into the server, you will see many directories and files. The directories are "2003_2004, 2004_2005 ... " and so forth. 
 - Each year, when you create the new folder for the year, you will need to make sure you add the "template" folder which has all the files for the website generator. 
@@ -49,10 +49,10 @@ If you are still unable to access the server, please contact [Mike Galloway](htt
 
 <!-- 2) Adding a student's website to the server  -->
 
-## Annual Webstite Refresh Procedure 
+## Annual Website Refresh Procedure 
 Following the instructions below exactly will yield the setup for the brand new annual senior design website! 
 
-1) Using the website generator, get all the websites from students. They should simply have 1 html page per team. Make sure you have all these files locally. 
+1) Using the website generator, get all the websites from students. They should simply have 1 HTML page per team. Make sure you have all these files locally. 
 
 2) Turn on the VPN and log into the server. 
 
@@ -97,20 +97,20 @@ Example
   </div>
 ```
 
-8) For every company you add in the "Projects.html" file, you will need to make sure you add in the approproate year folder as well. For example, in the case of "Brim", you will need to make sure you add a "Brim" folder in "20XX_20XX", then in the folder add the "index.html" file and "logo.png" file. To get the "logo.png" file, simply open the "index.html" file and drag and drop the logo icon into the folder. You may have to rename it. If you are confused on how to do this, you may use a past years folder and "Projects_YEAR.html" file to see how to connection works. 
+8) For every company you add in the "Projects.html" file, you will need to make sure you add in the appropriate year folder as well. For example, in the case of "Brim", you will need to make sure you add a "Brim" folder in "20XX_20XX", then in the folder add the "index.html" file and "logo.png" file. To get the "logo.png" file, simply open the "index.html" file and drag and drop the logo icon into the folder. You may have to rename it. If you are confused on how to do this, you may use a past years folder and "Projects_YEAR.html" file to see how to connection works. 
 
 9) Once you have updated your "Projects.html" page, it can be viewed here: 
 [http://www.cci.drexel.edu/SeniorDesign/Projects.html](http://www.cci.drexel.edu/SeniorDesign/Projects.html)
 
 10) Make sure you check the following on every project: 
     a) The logo is linked to the actual page (correct page!)
-    b) The logo has the correct aspect ratio (if not, ask the team to give you a new index/html file with better formatted images)
-    c) The team screenshots and headshots have the right aspect ratio (if not, ask the team to give you a new index/html file with better formatted images)
+    b) The logo has the correct aspect ratio (if not, ask the team to give you a new index.html file with better-formatted images)
+    c) The team screenshots and headshots have the right aspect ratio (if not, ask the team to give you a new index.html file with better-formatted images)
     d) Make sure the index.html page for the team does not have any mistakes like duplicate stakeholders and other anomalies. 
     
 11) By now, you should have all the websites set up, and correctly formatted! Good Job! 
 
-12) No we will make sure to add the Previous years projects in the PastProjects.html page (located in the root directory). We simply need to add the top 3 winners, and then a "Complete list" tag linking to the previously made projects page. 
+12) No we will make sure to add the Previous years' projects in the PastProjects.html page (located in the root directory). We simply need to add the top 3 winners, and then a "Complete list" tag linking to the previously made projects page. 
 
 13) Once this is completed, you are good to go! 
 
@@ -125,7 +125,7 @@ Example
 
 - In previous years, I have created a "Google Form". (Here is an example)[https://docs.google.com/forms/d/e/1FAIpQLSdSNciyfzGmhNCpmaFolh4ug5hpqo2_hEmqdhDRjiG2TyeN-g/viewform]
 
-- If you do decide to collect mails in Google Form, I recommend uncommenting a bit of code in [/js/javascript.js](https://github.com/AditGupta25/senior-design-website/blob/develop/website-generator/js/javascript.js) file. Alter line 558 below, and add the location to the Google Form, so the student are redirected to that submission site as soon as they create their own site. 
+- If you do decide to collect mails in Google Form, I recommend uncommenting a bit of code in [/js/javascript.js](https://github.com/AditGupta25/senior-design-website/blob/develop/website-generator/js/javascript.js) file. Alter line 558 below, and add the location to the Google Form, so the student is redirected to that submission site as soon as they create their site. 
 
 ```javascript
     557 // CHANGE THIS LOCATION WITH GOOGLE FORMS LOCATION
@@ -138,13 +138,13 @@ Example
 - If it is a small change, simply make it yourself! If it is a big change like a picture format problem, contact the student. 
 
 
-4) Where to past webpages go?
+4) Where do past webpages go?
 
 - The past webpages stay on the server, just rename the parent folder to a past year (Example: 2020_2021)
 
 5) How do I add the webpages for the Final Senior Design Showcase 
 
-- For senior design showcase, you will need to update the "index.html" page in the root directory of the server.
+- For the senior design showcase, you will need to update the "index.html" page in the root directory of the server.
 
 6) How do I deal with bugs? 
 
@@ -154,7 +154,7 @@ Example
 
 - This is normal. When students generate the site, it is not yet connected to the styling sheet located on the server. When you drag and drop the file on the server, it will automatically connect. 
 
-8) Images do not have correct aspect ratio. Why? 
+8) Images do not have the correct aspect ratio. Why? 
 
 - Often students will crop or edit existing images to make them fit in the pixel requirements. They will stretch or shrink images. Ask them to recreate the faulty images. 
 
@@ -163,4 +163,4 @@ Example
 
 - After making sure to update Github, deploy the code on the server with the instructions in one of the sections above named "Deploying Website"
 
-The senior design website creator was made by Adit Gupta. Please feel free to reach out to Adit at ag3338@drexel.edu, in the case there are any questions.
+The senior design website creator was made by Adit Gupta. Please feel free to reach out to Adit at ag3338@drexel.edu, in case there are any questions.
