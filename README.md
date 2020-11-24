@@ -110,14 +110,26 @@ Example
     
 11) By now, you should have all the websites set up, and correctly formatted! Good Job! 
 
-12) No we will make sure the 
+12) No we will make sure to add the Previous years projects in the PastProjects.html page (located in the root directory). We simply need to add the top 3 winners, and then a "Complete list" tag linking to the previously made projects page. 
+
+13) Once this is completed, you are good to go! 
 
 
 
 ## Common Questions
 1) I can not access the server to add web-pages
+If you are unable to access the server, please contact [Mike Galloway](https://drexel.edu/cci/about/directory/G/Galloway-Mike/) and [Jeff Salvage](https://drexel.edu/cci/about/directory/S/Salvage-Jeffrey/)
 
 2) How should I ask students to submit their websites? 
+In previous years, I have created a "Google Form". (Here is an example)[https://docs.google.com/forms/d/e/1FAIpQLSdSNciyfzGmhNCpmaFolh4ug5hpqo2_hEmqdhDRjiG2TyeN-g/viewform]
+
+If you do decide to collect mails in Google Form, I recommend uncommenting a bit of code in [/js/javascript.js](https://github.com/AditGupta25/senior-design-website/blob/develop/website-generator/js/javascript.js) file. Alter line 558 below, and add the location to the Google Form, so the student are redirected to that submission site as soon as they create their own site. 
+
+```javascript
+    557 // CHANGE THIS LOCATION WITH GOOGLE FORMS LOCATION
+    558 // window.location = "https://forms.gle/NjHkxRrJDoqPkJaJ8";
+```
+
 
 3) What if a change is required on the student's website
 
