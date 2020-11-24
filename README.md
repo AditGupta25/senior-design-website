@@ -63,9 +63,9 @@ Following the instructions below exactly will yield the setup for the brand new 
 5) You can simply download the latest code from [here](https://github.com/AditGupta25/senior-design-website/tree/develop/website-generator), and add that into the "year_year/template" directory.
 
 6) You can test to see if this is working so far by going on the following URL to see if your site works: 
-http://www.cci.drexel.edu/SeniorDesign/[ADD YEAR HERE]/template/index.html
+http://www.cci.drexel.edu/SeniorDesign/ADD YEAR HERE/template/index.html
 
-7) In the root directory of the server, you will find a "Projects.html" file. This file is most likely the file from the previous year, so rename this to "Project[ADD YEAR HERE].html" and duplicate the "Project.html" file. New, in your new project.html file you may delete all the projects from past years, and you will need to add new items here one at a time. Please see the template below: 
+7) In the root directory of the server, you will find a "Projects.html" file. This file is most likely the file from the previous year, so rename this to "Project_ADD YEAR HERE.html" and duplicate the "Projects.html" file. New, in your new Projects.html file you may delete all the projects from past years, and you will need to add new items here one at a time. Please see the template below: 
 
 Template
 ```html
@@ -97,7 +97,20 @@ Example
   </div>
 ```
 
+8) For every company you add in the "Projects.html" file, you will need to make sure you add in the approproate year folder as well. For example, in the case of "Brim", you will need to make sure you add a "Brim" folder in "20XX_20XX", then in the folder add the "index.html" file and "logo.png" file. To get the "logo.png" file, simply open the "index.html" file and drag and drop the logo icon into the folder. You may have to rename it. If you are confused on how to do this, you may use a past years folder and "Projects_YEAR.html" file to see how to connection works. 
 
+9) Once you have updated your "Projects.html" page, it can be viewed here: 
+[http://www.cci.drexel.edu/SeniorDesign/Projects.html](http://www.cci.drexel.edu/SeniorDesign/Projects.html)
+
+10) Make sure you check the following on every project: 
+    a) The logo is linked to the actual page (correct page!)
+    b) The logo has the correct aspect ratio (if not, ask the team to give you a new index/html file with better formatted images)
+    c) The team screenshots and headshots have the right aspect ratio (if not, ask the team to give you a new index/html file with better formatted images)
+    d) Make sure the index.html page for the team does not have any mistakes like duplicate stakeholders and other anomalies. 
+    
+11) By now, you should have all the websites set up, and correctly formatted! Good Job! 
+
+12) No we will make sure the 
 
 
 
