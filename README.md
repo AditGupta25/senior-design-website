@@ -25,13 +25,28 @@ Here is a summary of [/js/javascript.js](https://github.com/AditGupta25/senior-d
 
 4) Lastly, the downloadContent() method, takes (2) parameters - first being the file name to download, and second being the content within the file. We want to download the file if no flags were raised in the validation.
 
-## Deploying Website
-
-
-## Annual Webstite Refresh Procedure 
-
 
 ## Navigating the CCI Server 
+
+You will need to go to:
+smb://webserv.ischool.drexel.edu/wwwroot/SeniorDesign 
+
+
+## Deploying Website
+<!-- In this section we will go over two types of deployments that you may have to deal with: -->
+1) Adding a new version of the website generator to the server
+- If you update the website generator (often you will either update the index.html or js/javascript.js page) - deploying it is simply. 
+- Refer to the previous section to see how to get the VPN up and working. You need to be connected to the VPN to get to the server. 
+- Once you have logged into the server, you will see many directories and files. The directories are "2003_2004, 2004_2005 ... " and so forth. 
+- Each year, when you create the new folder for the year, you will need to make sure you add the "template" folder which has all the files for the website generator. 
+- You can simply download the latest code from [here](https://github.com/AditGupta25/senior-design-website/tree/develop/website-generator), and add that into the "year_year/template" directory.
+- Here is a live version of the website generator from a previous year in action: 
+[http://www.cci.drexel.edu/SeniorDesign/2020_2021/template/index.html](http://www.cci.drexel.edu/SeniorDesign/2020_2021/template/index.html)
+
+
+<!-- 2) Adding a student's website to the server  -->
+
+## Annual Webstite Refresh Procedure 
 
 
 ## Common Questions
