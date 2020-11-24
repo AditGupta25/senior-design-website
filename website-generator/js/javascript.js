@@ -553,8 +553,9 @@ function submitForm(){
                 }else{
                     console.log(globalInformation)
                     this.createWebsiteTemplate()
-                    alert("Congratulations! Your site has been created! Email Adit Gupta (ag3338@drexel.edu) if you have any questions. Click OK to redirect to submission page.")
-                    window.location = "https://forms.gle/NjHkxRrJDoqPkJaJ8";
+                    alert("Congratulations! Your site has been created!")
+                    // CHANGE THIS LOCATION WITH GOOGLE FORMS LOCATION
+                    // window.location = "https://forms.gle/NjHkxRrJDoqPkJaJ8";
                 }
             }
         }
